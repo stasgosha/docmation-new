@@ -1,0 +1,120 @@
+*,
+*:before,
+*:after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	position: relative;
+	background: var(--body-bg);
+
+	&.overflow{
+		overflow: hidden;
+	}
+
+	&.modal-visible,
+	&.nav-opened{
+		overflow: hidden;
+		height: 100vh;
+	}
+
+	img{
+		max-width: unset;
+	}
+}
+
+ul, ol{
+	list-style: none;
+}
+
+button{
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	appearance: none;
+	font-family: inherit;
+	box-shadow: none;
+	border-radius: 0;
+	// outline: none !important;
+}
+
+a, button{
+	text-decoration: none;
+	transition: all var(--t);
+	// outline: none !important;
+	border: none;
+}
+
+a img{
+	// outline: none !important;
+	// border: none !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+
+picture, iframe, figure{
+	display: block;
+}
+
+.wrapper{
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	.page-content{
+		flex: auto;
+		position: relative;
+		z-index: 5;
+		padding-top: 64px;
+	}
+
+	.footer{
+		flex: none;
+	}
+}
+
+.container{
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+
+	@media screen and (min-width: 576px){
+		max-width: 565px;
+	}
+
+	@media screen and (min-width: 768px){
+		max-width: 750px;
+	}
+
+	@media screen and (min-width: 992px){
+		max-width: 960px;
+	}
+
+	@media screen and (min-width: 1200px){
+		max-width: 1150px;
+	}
+
+	@media screen and (min-width: 1360px){
+		&.wide{
+			max-width: 1360px;
+		}
+	}
+}
+
+.visually-hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}

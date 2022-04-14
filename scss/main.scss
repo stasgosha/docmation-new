@@ -1,0 +1,37 @@
+@import "components/fonts";
+@import "components/vars";
+@import "components/assist";
+@import "components/layout";
+@import "components/typography";
+@import "icons";
+
+// Header
+@import "components/header/header";
+
+// Footer
+@import "components/footer/footer";
+ 
+// Common
+@import "components/common/buttons";
+@import "components/common/forms";
+@import "components/common/sliders";
+@import "components/common/modals";
+@import "components/common/menu-opener";
+@import "components/common/tabs-nav";
+@import "components/common/video-block";
+@import "components/common/accordions";
+@import "components/common/breadcrumbs";
+// @import "components/common/tables";
+
+// Sections
+@import "components/sections/first-screen-section";
+@import "components/sections/cant-find-solution-section";
+@import "components/sections/solutions-section";
+@import "components/sections/pricing-section";
+@import "components/sections/catalog-section";
+@import "components/sections/product-section";
+@import "components/sections/addons-section";
+@import "components/sections/related-products-section";
+@import "components/sections/cart-section";
+@import "components/sections/checkout-flow-component";
+@import "components/sections/confirmation-section";

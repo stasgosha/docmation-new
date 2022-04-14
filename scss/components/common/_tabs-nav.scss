@@ -1,0 +1,35 @@
+.tabs-nav{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 24px 0 calc(24px - 16px);
+	border-bottom: 1px solid rgba(#A6A7A9, .4);
+	margin-bottom: 24px;
+
+	.tab-btn{
+		font-size: 14px; // 16
+		line-height: 1.5;
+		font-weight: 600;
+		color: var(--text-dark);
+		text-align: left;
+		margin-right: 48px;
+		margin-bottom: 16px;
+
+		@media screen and (max-width: 575px){
+			margin-right: 24px;
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		&:hover,
+		&:focus{
+			color: var(--primary);
+		}
+
+		&.current{
+			color: var(--primary);
+		}
+	}
+}

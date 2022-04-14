@@ -1,0 +1,41 @@
+.accordion{
+	.ac-header{
+		padding-bottom: 35px;
+		border-bottom: 1px solid #C3C4C5;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+
+	.ac-caption{
+		font-size: 16px; // 20
+		line-height: 1.6;
+		font-weight: 400;
+		color: var(--text-dark);
+		cursor: pointer;
+		font-family: var(--second-font);
+	}
+
+	.ac-opener{
+		display: block;
+		flex: none;
+		width: 18px;
+		height: 18px;
+		background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cmask id='mask0_30_15932' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='2' y='5' width='14' height='8'%3E%3Cpath d='M8.9 12.69 2.96 5.77a.14.14 0 0 1 .1-.23h11.86c.12 0 .18.14.1.23L9.1 12.69a.14.14 0 0 1-.2 0Z' fill='%23606162'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_30_15932)'%3E%3Cpath fill='%23606162' d='M.69.69h16.62v16.62H.69z'/%3E%3C/g%3E%3C/svg%3E") no-repeat center center / contain;
+		cursor: pointer;
+		transition: all var(--t);
+	}
+
+	&.opened{
+		.ac-opener{
+			transform: rotate(-180deg);
+		}
+	}
+
+	.ac-content{
+		display: none;
+		padding: 35px 0;
+		border-bottom: 1px solid #C3C4C5;
+	}
+}

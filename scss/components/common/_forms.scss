@@ -1,0 +1,221 @@
+.fields-group{
+	padding: 32px;
+	border: 1px solid #C3C4C5;
+	border-radius: 4px;
+
+	@media screen and (max-width: 575px){
+		padding: 16px;
+	}
+}
+
+.fields-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 24px;
+
+	.wide{
+		grid-column: 1 / -1;
+	}
+
+	@media screen and (max-width: 767px){
+		grid-template-columns: 1fr;
+		grid-gap: 16px;
+	}
+}
+
+.form-control{
+	position: relative;
+	display: block;
+
+	.fake-label{
+		pointer-events: none;
+		@include p;
+		color: var(--text-light);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		transform-origin: left top;
+		left: 16px;
+		font-family: inherit;
+		transition: all var(--t);
+		z-index: 3;
+	}
+
+	input,
+	select{
+		height: 60px;
+		border-radius: 4px;
+		appearance: none;
+		box-shadow: none;
+		padding: 20px 16px 4px 16px;
+		@include p;
+		color: var(--text-dark);
+		font-family: inherit;
+		border: 1px solid #C3C4C5;
+		width: 100%;
+		transition: all var(--t);
+
+		&:focus{
+			border-color: var(--primary);
+			outline: none;
+		}
+
+		&[disabled]{
+			background: #F4F5F6;
+		}
+	}
+
+	.select-field{
+		position: relative;
+
+		&:after{
+			content: '';
+			display: block;
+			width: 18px;
+			height: 18px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 16px;
+			background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M8.893 12.685 2.966 5.767a.138.138 0 0 1 .105-.228h11.86c.118 0 .182.138.105.228l-5.933 6.918a.138.138 0 0 1-.21 0Z' fill='%23606162'/%3E%3C/svg%3E") no-repeat center center / contain;
+		}
+
+		select{
+			padding-right: 50px;
+
+			&:not([disabled]){
+				cursor: pointer;
+			}
+		}
+	}
+
+	&:focus-within,
+	&.not-empty{
+		.fake-label{
+			transform: translateY(calc(-50% - 9px)) scale(0.75);
+			color: var(--text-color);
+		}
+	}
+}
+
+.checkbox,
+.radio{
+	display: block;
+	margin: 0 !important;
+	padding: 7px 0;
+	border-radius: 4px;
+
+	input{
+		~ .fake-label{
+			padding-left: 28px;
+			position: relative;
+			cursor: pointer;
+			font-size: 14px; // 16
+			line-height: 18px;
+			display: block;
+			transition: all var(--t);
+			word-wrap: break-word;
+			color: var(--text-dark);
+
+			a{
+				color: var(--primary);
+
+				&:hover,
+				&:focus{
+					text-decoration: underline;
+				}
+			}
+
+			&:before{
+				content: '';
+				display: block;
+				width: 18px;
+				height: 18px;
+				border-radius: 2px;
+				border: 2px solid #606162;
+				position: absolute;
+				left: 0;
+				top: 0;
+				transition: all var(--t);
+			}
+
+			&:after{
+				content: '';
+				display: block;
+				width: 14px;
+				height: 14px;
+				background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cmask id='mask0_22_17040' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='2' width='13' height='10'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.83 2.85c.22.2.23.55.02.77l-7.6 8.07-4.2-4.23a.55.55 0 0 1 .8-.77l3.37 3.42 6.83-7.24c.2-.22.56-.23.78-.02Z' fill='%23202020'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_22_17040)'%3E%3Cpath fill='%23fff' d='M-.14 13.73V-.5h14.22v14.22z'/%3E%3C/g%3E%3C/svg%3E") no-repeat center center / contain;
+				position: absolute;
+				left: 2px;
+				top: 2px;
+				opacity: 0;
+				transition: all var(--t);
+			}
+
+			&:hover{
+				color: var(--text-color);
+			}
+		}
+
+		&:focus-visible{
+			~ .fake-label{
+				&:before{
+					outline: 2px solid #000;
+					outline-offset: 3px;
+				}
+			}
+		}
+
+		&:checked{
+			~ .fake-label{
+				&:before{
+					background: var(--primary);
+					border-color: var(--primary);
+				}
+
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.radio{
+	input{
+		~ .fake-label{
+			&:before{
+				border-radius: 50%;
+				background: transparent !important;
+			}
+
+			&:after{
+				border-radius: 50%;
+				width: 8px;
+				height: 8px;
+				background: var(--primary);
+				left: 5px;
+				top: 5px;
+			}
+		}
+	}
+}
+
+.hidden-field-block{
+	.block-opener{
+		display: flex;
+		align-items: center;
+		font-size: 12px;
+		line-height: 1.5;
+		color: var(--primary);
+
+		.btn-icon{
+			width: 18px;
+			height: 18px;
+			display: block;
+			fill: currentcolor;
+			margin-right: 8px;
+			flex: none;
+		}
+	}
+}

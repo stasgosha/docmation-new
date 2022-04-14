@@ -1,0 +1,40 @@
+:root{
+	// Fonts
+	--main-font:  'Cisco Sans', Arial, sans-serif;
+	--second-font: 'Cisco Sans', Arial, sans-serif;
+
+	// Colors
+	--gray: #64646C;
+	--dark: #1F1D2B;
+	--light: #7A7A7A;
+
+	--blue: #0076D5;
+	--blue-darken: #1751FF;
+	--blue-lighten: #00BCEB;
+
+	--primary-gradient: linear-gradient(180deg, #0076D5 0%, #00BCEB 100%);
+	--secondary-gradient: linear-gradient(314.11deg, #20966C -6.95%, #73ED87 190.01%);
+
+	// Params
+	--body-bg: #F3F4F8; // site background
+	--footer-bg: #0F2344;
+	--header-bg: #fff;
+	--t: .3s; // animation duration
+	--r: 8px; // default border radius
+	--shadow: 0px 12px 48px rgba(27, 28, 29, 0.1);
+
+	--text-color: #606162;
+	--text-color-rgb: 96, 97, 98;
+	--text-dark: #1B1C1D;
+	--text-light: #C3C4C5;
+
+	--border-color-rgb: rgba(166, 167, 169, .4);
+
+	--primary: var(--blue);
+	--primary-darken: var(--blue-darken);
+	--primary-lighten: var(--blue-lighten);
+
+	--accent: var(--blue);
+	--accent-darken: var(--blue-darken);
+	--accent-lighten: var(--blue-lighten);
+}

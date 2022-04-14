@@ -1,0 +1,52 @@
+.breadcrumbs{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 12px;
+	line-height: 1.25;
+	// font-weight: 500;
+	color: var(--text-color);
+	// margin-bottom: 24px;
+
+	li{
+		margin-right: 9px;
+
+		&:after{
+			content: '/';
+			margin-left: 9px;
+			// display: inline-block;
+			// width: 6px;
+			// height: 11px;
+			// margin-left: 16px;
+			// background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 14'%3E%3Cpath d='m1 13 6-6-6-6' stroke='%231F1D2B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center center / contain;
+		}
+
+		a{
+			color: inherit;
+
+			&:hover,
+			&:focus{
+				color: var(--primary);
+			}
+		}
+
+		&:last-child{
+			a{
+				pointer-events: none;
+				color: var(--text-light);
+			}
+
+			&:after{
+				display: none;
+			}
+		}
+	}
+
+	// @media screen and (max-width: 991px){
+	// 	margin-bottom: 32px;
+	// }
+}
+
+.breadcrumbs-section{
+	padding: 48px 0 34px;
+	background: #fff;
+}
