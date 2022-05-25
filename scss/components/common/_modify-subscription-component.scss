@@ -1,0 +1,158 @@
+.modify-subscription-component{
+	.cmp-header{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #C3C4C5;
+	}
+
+	.cmp-title{
+		font-size: 20px;
+		line-height: 1.6;
+		color: var(--text-dark);
+		font-weight: 400;
+	}
+
+	.cmp-price{
+		text-align: right;
+		white-space: nowrap;
+	}
+
+	.cmp-footer{
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 24px;
+		padding-top: 32px;
+
+		.btn{
+			min-width: 125px;
+
+			@media screen and (max-width: 575px){
+				flex: auto;
+				gap: 16px;
+				flex-grow: 1;
+				flex-shrink: 0;
+			}
+		}
+	}
+
+	.cmp-group{
+		padding: 24px 0;
+		border-bottom: 1px solid #C3C4C5;
+	}
+
+	.cmp-group-title{
+		font-size: 16px;
+		line-height: 2;
+		color: var(--text-dark);
+		font-weight: bold;
+
+		&:not(:last-child){
+			margin-bottom: 8px;
+		}
+	}
+
+	.cmp-group-field{
+		margin-bottom: 16px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		.form-control{
+			margin-bottom: 8px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			+ .form-field{
+				margin-top: 16px;
+			}
+		}
+
+		.form-field{
+			margin-bottom: 16px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.cmp-group-field-title{
+		margin-bottom: 8px;
+		color: var(--text-dark);
+	}
+
+	.cmp-settings-list{
+		display: grid;
+		grid-gap: 16px;
+
+		.item{
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 24px;
+
+			&.align-center{
+				align-items: center;
+			}
+
+			.item-content{
+				max-width: 250px;
+			}
+
+			.item-title{
+				font-size: 16px;
+				color: var(--text-dark);
+			}
+
+			.item-action{
+				.btn{
+					min-width: 125px;
+
+					@media screen and (max-width: 575px){
+						min-width: 90px;
+						padding-left: 16px;
+						padding-right: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	.cmp-info-table{
+		&:not(:last-child){
+			margin-bottom: 24px;
+		}
+
+		td + td{
+			padding-left: 24px;
+		}
+	}
+
+	.cmp-table{
+		width: 100%;
+		border-spacing: 0;
+
+		th{
+			height: 48px;
+			padding: 8px 24px;
+			background: #F4F5F6;
+			font-size: 16px;
+			color: var(--text-dark);
+			text-align: left;
+			font-weight: 400;
+		}
+
+		td{
+			padding-top: 24px;
+			padding: 8px 24px;
+			color: var(--text-dark);
+		}
+	}
+}

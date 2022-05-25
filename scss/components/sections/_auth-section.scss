@@ -1,0 +1,77 @@
+.auth-section{
+	padding: 70px 0;
+}
+
+.auth-component{
+	padding: 40px 20px 28px;
+	max-width: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #fff;
+	border-radius: var(--r);
+	box-shadow: var(--shadow);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&.no-bg{
+		box-shadow: none;
+		border-radius: 0;
+		background: transparent;
+	}
+
+	.cmp-logo{
+		margin-bottom: 30px;
+
+		img{
+			height: 96px;
+			width: auto;
+			display: block;
+		}
+	}
+
+	.cmp-title{
+		width: 100%;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1.5;
+		color: var(--text-dark);
+		margin-bottom: 36px;
+		font-weight: 400;
+	}
+
+	.cmp-form{
+		width: 100%;
+
+		.form-links{
+			margin-top: 32px;
+			display: flex;
+			justify-content: flex-end;
+			gap: 16px;
+		}
+
+		.form-submit{
+			display: flex;
+			justify-content: center;
+			gap: 16px;
+			margin-top: 22px;
+		}
+
+		.form-footer{
+			margin-top: 32px;
+			padding-top: 32px;
+			border-top: 1px solid #C3C4C5;
+			text-align: center;
+
+			a{
+				color: var(--primary);
+				font-weight: 400;
+
+				&:hover,
+				&:focus{
+					color: var(--primary-darken);
+				}
+			}
+		}
+	}
+}

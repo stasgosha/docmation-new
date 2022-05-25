@@ -5,7 +5,7 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	background: rgba(#000, .6);
+	background: rgba(#0F2344, .88);
 	overflow-y: auto;
 	overflow-x: hidden;
 	overscroll-behavior-y: contain;
@@ -18,7 +18,7 @@
 
 	.modal-dialog{
 		width: calc(100% - 15px * 2);
-		max-width: 1170px;
+		max-width: 570px;
 		margin: 70px auto;
 		cursor: default;
 		flex: none;
@@ -89,31 +89,11 @@
 		background: #fff;
 		border-radius: var(--r);
 		position: relative;
-		padding: 60px 100px;
+		padding: 32px;
 	}
 
 	.modal-text{
 		text-align: center;
-	}
-
-	&.small{
-		.modal-dialog{
-			max-width: 420px;
-		}
-
-		.modal-content{
-			padding: 40px 50px 50px;
-
-			@media screen and (max-width: 575px){
-				padding: 40px 30px 50px;
-			}
-		}
-	}
-
-	@media screen and (max-width: 1229px){
-		.modal-content{
-			padding: 40px 30px;
-		}
 	}
 
 	@media screen and (max-width: 575px){

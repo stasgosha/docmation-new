@@ -21,7 +21,9 @@
 @import "components/common/video-block";
 @import "components/common/accordions";
 @import "components/common/breadcrumbs";
-// @import "components/common/tables";
+@import "components/common/tables";
+
+@import "components/common/modify-subscription-component";
 
 // Sections
 @import "components/sections/first-screen-section";
@@ -35,3 +37,5 @@
 @import "components/sections/cart-section";
 @import "components/sections/checkout-flow-component";
 @import "components/sections/confirmation-section";
+@import "components/sections/auth-section";
+@import "components/sections/shopping-cart-section";

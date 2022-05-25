@@ -126,6 +126,10 @@
 	align-items: center;
 	min-height: 48px;
 
+	&.fullwidth{
+		width: 100%;
+	}
+
 	.block-btn{
 		width: 32px;
 		height: 32px;

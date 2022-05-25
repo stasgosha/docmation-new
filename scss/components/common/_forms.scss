@@ -17,6 +17,14 @@
 		grid-column: 1 / -1;
 	}
 
+	&.small-gap{
+		grid-gap: 8px;
+	}
+
+	&.single-column{
+		grid-template-columns: 1fr;
+	}
+
 	@media screen and (max-width: 767px){
 		grid-template-columns: 1fr;
 		grid-gap: 16px;
@@ -62,6 +70,14 @@
 
 		&[disabled]{
 			background: #F4F5F6;
+		}
+	}
+
+	&.no-label{
+		input,
+		select{
+			padding-top: 10px;
+			padding-bottom: 10px;
 		}
 	}
 
@@ -170,11 +186,31 @@
 			~ .fake-label{
 				&:before{
 					background: var(--primary);
-					border-color: var(--primary);
+					border-color: var(--primary) !important;
 				}
 
 				&:after{
 					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&.box-on-right{
+		input{
+			~ .fake-label{
+				padding-left: 0;
+				padding-right: 28px;
+
+				&:before{
+					left: auto;
+					right: 0;
+					border-color: #C3C4C5;
+				}
+
+				&:after{
+					left: auto;
+					right: 2px;
 				}
 			}
 		}
@@ -216,6 +252,45 @@
 			fill: currentcolor;
 			margin-right: 8px;
 			flex: none;
+		}
+	}
+}
+
+.switch{
+	.fake-label{
+		display: block;
+		width: 36px;
+		height: 18px;
+		position: relative;
+		border-radius: 9px;
+		background: #C3C4C5;
+		transition: all var(--t);
+		position: relative;
+		cursor: pointer;
+
+		&:before{
+			content: '';
+			display: block;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			background: #fff;
+			position: absolute;
+			left: 2px;
+			top: 2px;
+			transition: all var(--t);
+		}
+	}
+
+	input{
+		&:checked{
+			~ .fake-label{
+				background: var(--primary);
+
+				&:before{
+					left: calc(100% - 14px - 2px);
+				}
+			}
 		}
 	}
 }

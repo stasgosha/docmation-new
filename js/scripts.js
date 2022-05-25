@@ -113,9 +113,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
 			$('.form-control select').change(function(){
 				if ( !!$(this).val() ) {
-					$(el).addClass('not-empty');
+					$(this).closest('.form-control').addClass('not-empty');
 				} else{
-					$(el).removeClass('not-empty');
+					$(this).closest('.form-control').removeClass('not-empty');
 				}
 			});
 
